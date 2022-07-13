@@ -1,10 +1,17 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import content from './content';
 import Card from './components/Card';
+import Footer from './components/Footer';
 
 function App() {
+
+  const mediaQuery = {
+    mobile: '688px',
+    tablet: '992px',
+  }
 
   const cards = content.map(item => {
     return <Card 
@@ -17,12 +24,14 @@ function App() {
   })
 
   return (
-    <>
+    <ThemeProvider theme={mediaQuery}>
+      <>
       <Header/>
-     <Hero/>
-     {cards}
-     <p>Hola</p> 
-    </>
+      <Hero/>
+      {cards}
+      <Footer/>
+      </>
+    </ThemeProvider>
   );
 }
 
