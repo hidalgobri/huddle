@@ -1,6 +1,9 @@
 {
   "name": "styled-compontents-landpage",
   "version": "0.1.0",
+   "engines": {
+    "node": "v14.17.5"
+  },
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
